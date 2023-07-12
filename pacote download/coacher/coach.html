@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Gerador de Quotes Motivacionais</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
+    <style>
+      body {
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        font-family: sans-serif;
+      }
+      #quote {
+        font-size: 2em;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+      #new-quote {
+        font-size: 1.5em;
+        padding: 10px 20px;
+        border-radius: 5px;
+        background-color: #fff;
+        color: #000;
+        text-decoration: none;
+        transition: background-color 0.2s ease;
+      }
+      #new-quote:hover {
+        background-color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="display-1">Gerador de Quotes Motivacionais</h1>
+      <p id="quote"></p>
+      <a href="#" id="new-quote">Gerar novo quote</a>
+    </div>
+    <script>
+      const quotes = [
+        "Acredita em ti mesmo. Acredita nos teus sonhos. Sem esta convicção, nada acontece.",
+        "Não tenhas medo de falhar. Só falha quem tenta.",
+        "A vida é uma aventura ousada ou não é nada.",
+        "Só se pode alcançar um grande êxito quando nos mantemos fiéis a nós mesmos.",
+        "O sucesso é a soma de pequenos esforços repetidos diariamente.",
+        "A vida é uma oportunidade, aproveita-a.",
+        "Não esperes por oportunidades, cria-as.",
+        "Se queres algo que nunca tiveste, tens de fazer algo que nunca fizeste.",
+        "Não te esqueças que os muros que te impedem de avançar foram construídos por ti mesmo.",
+        "O pessimista vê dificuldade em cada oportunidade; o otimista vê oportunidade em cada dificuldade.",
+        "A felicidade não é algo feito. Vem das tuas próprias ações.",
+        "Se queres mudar o mundo, muda a tua mente.",
+        "Não é o que tens, ou quem és, ou onde estás, ou o que estás fazendo que te faz feliz ou infeliz. É o que pensas sobre isso.",
+        "Nunca te esqueças de sorrir, porque o dia em que não sorris é um dia perdido.",
+        "Não é sobre ter tempo, é sobre fazer tempo.",
+        "As oportunidades não surgem. Tu é que as crias.",
+        "Tenta ser um arco-íris na nuvem de alguém.",
+        "Sê corajoso o suficiente para viver a vida de acordo com o teu coração e intuição.",
+        "A inspiração existe, mas tem de te encontrar a trabalhar.",
+        "Se sabes que vais falhar, então falha gloriosamente.",
+    "Acredita em ti mesmo e tudo será possível.",
+    "Não deixes para amanhã o que podes fazer hoje.",
+    "Não desistas. O começo é sempre o mais difícil.",
+    "Os limites são apenas ilusões da tua mente.",
+    "Não te compares com os outros. Compara-te apenas contigo mesmo.",
+    "O fracasso é apenas uma oportunidade para começares de novo, com mais experiência.",
+    "Não importa o quão devagar vais, desde que não pare.",
+    "A persistência é o caminho do êxito.",
+    "A melhor maneira de prever o futuro é criá-lo.",
+    "Não há nada impossível, pois os sonhos de ontem são as esperanças de hoje e podem converter-se em realidade amanhã.",
+    "A vida é um processo, uma jornada. Desfruta do percurso.",
+    "As grandes coisas nunca foram feitas por uma só pessoa. São feitas por uma equipa de pessoas.",
+    "O sucesso é a habilidade de ir de fracasso em fracasso sem perder o entusiasmo.",
+    "A criatividade é a inteligência a divertir-se.",
+    "Não te preocupes com os falhanços, preocupa-te com as oportunidades perdidas por não tentares.",
+    "Não há atalhos para qualquer lugar que valha a pena ir.",
+    "Não importa quantas vezes cais, importa quantas vezes te levantas.",
+    "Torna-te na mudança que queres ver no mundo.",
+    "A felicidade não é a ausência de problemas, é a habilidade de lidar com eles.",
+    "O sucesso não é a chave para a felicidade. A felicidade é a chave para o sucesso. Se amas o que fazes, serás bem-sucedido.",
+    "Acredita que és capaz e já estás a meio caminho andado.",
+  ];
+  
+  function generateQuote() {
+    const randomNumber = Math.floor(Math.random() * quotes.length);
+    document.getElementById("quote").innerHTML = quotes[randomNumber];
+  }
+  
+  generateQuote();
+  
+  document.getElementById("new-quote").addEventListener("click", generateQuote);
+</script>
+</body>
+</html>
